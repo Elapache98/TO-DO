@@ -1,0 +1,103 @@
+@media (max-width: 480px) {
+    .container2 {
+        max-width: 300px;
+    }
+}
+
+#userId {
+    padding: 8px;
+    width: 300px;
+    border-radius: 4px;
+    border-style: solid;
+    margin-right: 8px;
+    border-style: solid;
+    border-color: #f5f5f5;
+    background-color: #fafafa;
+}
+
+#newTask {
+    padding: 8px;
+    width: 250px;
+    border-radius: 4px;
+    border-style: solid;
+    margin-right: 8px;
+    border-style: solid;
+    border-color: #f5f5f5;
+    background-color: #fafafa;
+}
+
+
+#container1 {
+    position: relative;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#container2 {
+    background-color: #faefcc;
+    padding: 8px;
+    border-radius: 8px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    flex: 1;
+
+
+    width: fit-content;
+
+}
+
+
+
+#nameUpdate {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: #faefcc;
+    border-style: solid;
+    border-color: #f2edcd;
+    border-width: 1.75px;
+    border-radius: 8px;
+    padding: 8px;
+    width: fit-content;
+    margin-bottom: 24px;
+}
+
+#taskMaker {
+    display: flex;
+
+}
+
+#button1 {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #3d67f1;
+    color: white;
+    border-style: solid;
+    border-color: #adc6f0;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+
+}
+
+#button1:hover {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #1b4df1;
+    color: white;
+    border-style: solid;
+    border-color: #adc6f0;
+    border-width: 2px;
+}
+
+#svg {
+    margin-right: 2px;
+}
