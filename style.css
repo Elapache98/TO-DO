@@ -101,3 +101,28 @@
 #svg {
     margin-right: 2px;
 }
+
+#button2 {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #3d67f1;
+    color: white;
+    border-style: solid;
+    border-color: #adc6f0;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+
+}
+
+#button2:hover {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #1b4df1;
+    color: white;
+    border-style: solid;
+    border-color: #adc6f0;
+    border-width: 2px;
+}
