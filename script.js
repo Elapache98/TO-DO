@@ -3,8 +3,7 @@ function updateTitle() {
 
     if (userName !== "") {
         document.getElementById("appName").textContent = `${userName}'s To-Do List`;
-        document.getElementById("nameUpdate").style.display = "none";
-        document.getElementById("userId").value = "";
+
 
         // Save the 'userName' to Local Storage
         localStorage.setItem('userName', userName);
@@ -15,13 +14,30 @@ function updateTitle() {
 const userName = localStorage.getItem('userName');
 if (userName) {
     document.getElementById("appName").innerText = `${userName}'s To-Do List`;
+
+
+
 }
 
 // Apply the 'updateTitle' function when the 'button1' is clicked
 const button1 = document.getElementById("button1");
-button1.addEventListener("click", updateTitle);
+button1.addEventListener("click", handleClick);
 
 function goToNextPage() {
     // Navigate to "next.html"
     window.location.href = 'next.html';
 }
+
+function goToNamePage() {
+    window.location.href = 'name.html';
+}
+function handleClick() {
+    updateTitle();
+    goToNamePage();
+}
+
+function goToHomePage() {
+    window.location.href = 'index.html';
+}
+
+

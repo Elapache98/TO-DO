@@ -67,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-items: center;
-    background-color: rgb(250, 239, 204, 0.35);
+    background-color: rgb(250, 239, 204, 0.45);
 
     border-style: solid;
     border-color: #f2edcd;
@@ -106,6 +106,7 @@
     border-style: solid;
     border-color: #adc6f0;
     border-width: 2px;
+    cursor: pointer;
 }
 
 #svg {
@@ -135,6 +136,44 @@
     border-style: solid;
     border-color: #adc6f0;
     border-width: 2px;
+    cursor: pointer;
+}
+
+#buttonGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#secButton1 {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: white;
+    color: #3d67f1;
+    border-style: solid;
+    border-color: #3d67f1;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-right: 16px;
+
+}
+
+#secButton1:hover {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgb(244, 248, 251);
+    color: #3d67f1;
+    border-style: solid;
+    border-color: #3d67f1;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+
 }
 
 body {
@@ -142,7 +181,7 @@ body {
 }
 
 #appName {
-    color: #0184ff;
+    color: #1e2140;
 }
 
 .dot {
@@ -175,6 +214,22 @@ body {
     filter: opacity(100px);
     animation: moveDots2 25s linear infinite;
 }
+
+#modal {
+    background-color: rgb(250, 239, 204, 0.55);
+
+    border-style: solid;
+    border-color: #f2edcd;
+    border-width: 1.75px;
+    padding: 16px;
+    border-radius: 8px;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+
+}
+
+
 
 @keyframes moveDots {
 
