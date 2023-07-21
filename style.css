@@ -38,20 +38,45 @@
 
 
 #container2 {
-    background-color: #faefcc;
-    padding: 8px;
+    background-color: rgb(250, 239, 204, 0.45);
+
+    border-style: solid;
+    border-color: #f3eccf;
+    padding: 16px;
     border-radius: 8px;
     display: grid;
-    align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
-    flex: 1;
+    align-items: center;
+    margin-right: 64px;
+    margin-left: 64px;
+    margin-bottom: 64px;
+    box-sizing: border-box;
+    grid-template-rows: auto 1fr;
 
 
-    width: fit-content;
+    width: 400px;
 
 }
+
+#gridContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+
+}
+
+@media screen and (max-width: 600px) {
+    .gridContainer {
+        flex-direction: column;
+        /* Change to column when screen size is reduced */
+    }
+
+
+}
+
+
 
 #nextcontainer1 {
     position: relative;
@@ -80,6 +105,8 @@
 
 #taskMaker {
     display: flex;
+    width: 100%;
+
 
 }
 
@@ -216,20 +243,63 @@ body {
 }
 
 #modal {
-    background-color: rgb(250, 239, 204, 0.55);
+    background-color: rgb(250, 239, 204, 0.45);
 
     border-style: solid;
-    border-color: #f2edcd;
+    border-color: #f3eccf;
     border-width: 1.75px;
     padding: 16px;
     border-radius: 8px;
     display: grid;
-    justify-self: center;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    color: #415472;
+    max-height: 450px;
+    max-width: 550px;
 
 }
 
+#heroMessage {
+    line-height: 16px;
 
+}
+
+#swagExtra {
+    background-clip: text;
+    /* This property applies the background to the text */
+    -webkit-background-clip: text;
+    /* For cross-browser support */
+    background-image: linear-gradient(to right, #f9674d, #2974f6);
+    /* Set the text color transparent to let the gradient show through */
+    color: transparent;
+    padding: 8px;
+}
+
+#taskAndButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+#buttonStack {
+    display: grid;
+
+
+
+}
+
+#taskBox {
+    width: 100px;
+    align-content: normal;
+}
 
 @keyframes moveDots {
 
