@@ -33,6 +33,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 
@@ -52,13 +53,22 @@
 
 }
 
+#nextcontainer1 {
+    position: relative;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
 #nameUpdate {
     display: flex;
     align-items: center;
     justify-items: center;
-    background-color: #faefcc;
+    background-color: rgb(250, 239, 204, 0.35);
+
     border-style: solid;
     border-color: #f2edcd;
     border-width: 1.75px;
@@ -125,4 +135,84 @@
     border-style: solid;
     border-color: #adc6f0;
     border-width: 2px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#appName {
+    color: #0184ff;
+}
+
+.dot {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to top, #664ae3, #6f91f8);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(25%, -100%);
+    filter: blur(10px);
+    filter: opacity(100px);
+    animation: moveDots 25s linear infinite;
+}
+
+
+.dot1 {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to top, #fff2bd, #6f91f8);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(25%, -100%);
+    filter: blur(10px);
+    filter: opacity(100px);
+    animation: moveDots2 25s linear infinite;
+}
+
+@keyframes moveDots {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(calc(-50vw - 40px), 0);
+    }
+
+    50% {
+        transform: translate(calc(-75vw - 40px), calc(-50vh - 40px));
+    }
+
+    75% {
+        transform: translate(0, calc(50vh - 40px));
+    }
+}
+
+
+@keyframes moveDots2 {
+
+    0%,
+    100% {
+        transform: translate(80, 0);
+    }
+
+    25% {
+        transform: translate(calc(10vw - 10px), 0);
+    }
+
+    50% {
+        transform: translate(calc(-75vw - 10px), calc(50vh - 40px));
+    }
+
+    75% {
+        transform: translate(0, calc(-50vh - 40px));
+    }
 }
