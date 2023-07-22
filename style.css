@@ -45,7 +45,7 @@
     padding: 16px;
     border-radius: 8px;
     display: grid;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     margin-right: 64px;
     margin-left: 64px;
@@ -110,6 +110,63 @@
 
 }
 
+#taskAndButton {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px;
+    background-color: #fafafa;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: rgb(173, 198, 240, .5);
+}
+
+#taskText {
+    flex-grow: 1;
+    margin-right: fit-content;
+
+}
+
+#buttonStack {
+    display: grid;
+}
+
+#taskBox {
+    margin-right: 8px;
+}
+
+#deleteButton {
+    background-color: #ef553a;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #f9d4d3;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+#deleteButton:hover {
+    background-color: #d53114;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #f9d4d3;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 #button1 {
     padding: 8px;
     border-radius: 4px;
@@ -120,7 +177,9 @@
     border-width: 2px;
     display: flex;
     align-items: center;
+    align-content: center;
     justify-items: center;
+    justify-content: center;
 
 
 }
@@ -137,7 +196,7 @@
 }
 
 #svg {
-    margin-right: 2px;
+    margin-right: 8px;
 }
 
 #button2 {
@@ -256,7 +315,7 @@ body {
     place-items: center;
     color: #415472;
     max-height: 450px;
-    max-width: 550px;
+    max-width: 425px;
 
 }
 
@@ -276,30 +335,9 @@ body {
     padding: 8px;
 }
 
-#taskAndButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-
-}
-
-#buttonStack {
-    display: grid;
 
 
 
-}
-
-#taskBox {
-    width: 100px;
-    align-content: normal;
-}
 
 @keyframes moveDots {
 
