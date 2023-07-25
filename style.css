@@ -127,6 +127,7 @@
     border-style: solid;
     border-radius: 4px;
     border-color: rgb(173, 198, 240, .5);
+    margin-bottom: 8px;
 }
 
 #taskText {
@@ -147,8 +148,8 @@
 }
 
 #deleteButton {
-    background-color: #ef553a;
-    color: white;
+    background-color: #fafafa;
+    color: #d53114;
     padding: 8px;
     border-radius: 4px;
     border-style: solid;
@@ -237,8 +238,8 @@
 #editButton {
     padding: 8px;
     border-radius: 4px;
-    background-color: #3d67f1;
-    color: white;
+    background-color: #fafafa;
+    color: #3d67f1;
     border-style: solid;
     border-color: #adc6f0;
     border-width: 2px;
