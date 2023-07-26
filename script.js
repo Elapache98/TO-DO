@@ -38,6 +38,7 @@ function handleClick() {
 function goToHomePage() {
     window.location.href = 'index.html';
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     const addButton = document.getElementById("addButton");
     const taskList = document.getElementById("taskList");
@@ -109,9 +110,17 @@ document.addEventListener("DOMContentLoaded", function () {
         taskList.appendChild(taskDiv); // Append the new task to the task list
     }
 
+    const newTaskInputAlternate = document.getElementById("newTask");
+    newTaskInputAlternate.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            handleAddButtonClick();
+        }
+
+    });
+
+
+
 });
-
-
 
 
 function deleteTask(event) {
@@ -124,7 +133,27 @@ function deleteTask(event) {
 const taskList = document.getElementById("taskList");
 taskList.addEventListener("click", function (event) {
     const deleteButton = event.target;
-    if (deleteButton.matches("#deleteButton")) {
+    if (deleteButton.matches("#deleteButton") || deleteButton.matches("#deleteSvg")) {
         deleteTask(event);
     }
 });
+
+deleteSvg.addEventListener("click", deleteTask);
+
+
+const taskText = document.getElementById("taskText");
+function editTask(event) {
+    const editButton = event.target;
+    const taskText = editButton.closest("#taskAndButton").queryselector("#taskText");
+    taskText.contentEditable = true;
+    taskText.focus();
+
+
+
+    if (editButton.matches("#editButton")) {
+        editTask(event);
+    }
+}
+
+
+editButton.addEventListener("click", editTask);
