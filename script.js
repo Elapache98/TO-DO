@@ -108,8 +108,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         taskList.appendChild(taskDiv); // Append the new task to the task list
     }
+
 });
 
 
-///////
 
+
+function deleteTask(event) {
+    const deleteButton = event.target;
+    const taskCard = deleteButton.closest("#taskAndButton");
+    if (taskCard) {
+        taskCard.remove();
+    }
+}
+const taskList = document.getElementById("taskList");
+taskList.addEventListener("click", function (event) {
+    const deleteButton = event.target;
+    if (deleteButton.matches("#deleteButton")) {
+        deleteTask(event);
+    }
+});
