@@ -464,3 +464,43 @@ body {
         transform: translate(0, calc(-50vh - 40px));
     }
 }
+
+
+@font-face {
+    font-family: Bold;
+    src: url(Satoshi-Bold.otf);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(Satoshi-Regular.otf);
+}
+
+@font-face {
+    font-family: Medium;
+    src: url(Satoshi-Medium.otf);
+}
+
+
+h1 {
+    font-family: Bold;
+}
+
+
+h2 {
+    font-family: Bold;
+}
+
+h3 {
+    font-family: Bold;
+}
+
+
+button {
+    font-family: Medium;
+}
+
+body {
+    font-family: Regular;
+    color: #2f3c51
+}
