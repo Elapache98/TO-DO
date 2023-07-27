@@ -51,6 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
             addNewTask(newTaskText);
             document.getElementById("newTask").value = ""; // Clear the input field after adding task
         }
+        updateTasksInLocalStorage();
+    }
+
+    function updateTasksInLocalStorage() {
+        const tasks = Array.from(document.querySelectorAll("#taskText")).map(function (task) {
+            return task.textContent;
+        });
+        localStorage.setItem("tasks", JSON.stringify(tasks));
     }
 
     function addNewTask(taskText) {
@@ -107,8 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
         taskDiv.appendChild(taskSpan);
         taskDiv.appendChild(buttonDiv);
 
-        taskList.appendChild(taskDiv); // Append the new task to the task list
+        taskList.appendChild(taskDiv);
+        updateTasksInLocalStorage(); // Append the new task to the task list
     }
+
 
     const newTaskInputAlternate = document.getElementById("newTask");
     newTaskInputAlternate.addEventListener("keypress", function (event) {
@@ -118,9 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
-
 });
+
+
+
+
+
 
 
 function deleteTask(event) {
@@ -128,6 +141,7 @@ function deleteTask(event) {
     const taskCard = deleteButton.closest("#taskAndButton");
     if (taskCard) {
         taskCard.remove();
+        updateTasksInLocalStorage();
     }
 }
 const taskList = document.getElementById("taskList");

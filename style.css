@@ -58,6 +58,38 @@
 
 }
 
+#container3 {
+    background-color: rgb(250, 239, 204, 0.45);
+
+    border-style: solid;
+    border-color: #f3eccf;
+    padding: 16px;
+    border-radius: 8px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-right: 64px;
+    margin-left: 64px;
+    margin-bottom: 64px;
+    box-sizing: border-box;
+    grid-template-rows: auto 1fr;
+
+
+    width: 400px;
+
+}
+
+#completedTasks {
+    background-color: #fafafa;
+    border-style: solid;
+    border-color: #adc6f0;
+    border-width: 1px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+}
+
 #gridContainer {
     display: flex;
     justify-content: start;
@@ -145,6 +177,13 @@
 
 
 #taskText {
+    flex-grow: 1;
+    margin-right: fit-content;
+    display: flex;
+
+}
+
+#completeText {
     flex-grow: 1;
     margin-right: fit-content;
     display: flex;
