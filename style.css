@@ -47,8 +47,8 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    margin-right: 64px;
-    margin-left: 64px;
+    margin-right: 32px;
+    margin-left: 32px;
     margin-bottom: 64px;
     box-sizing: border-box;
     grid-template-rows: auto 1fr;
@@ -68,8 +68,8 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    margin-right: 64px;
-    margin-left: 64px;
+    margin-right: 32px;
+    margin-left: 32px;
     margin-bottom: 64px;
     box-sizing: border-box;
     grid-template-rows: auto 1fr;
@@ -93,14 +93,15 @@
 #gridContainer {
     display: flex;
     justify-content: start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: start;
     position: relative;
+
 
 }
 
 @media screen and (max-width: 750px) {
-    .gridContainer {
+    #gridContainer {
         flex-direction: column;
         /* Change to column when screen size is reduced */
     }
@@ -108,13 +109,24 @@
 
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the elements horizontally */
+}
 
+#flexContainer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
 
 #nextcontainer1 {
     position: relative;
 
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: start;
     align-items: center;
 
 }
