@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+//delete task func
 function deleteTask(event) {
     const deleteButton = event.target;
     const taskCard = deleteButton.closest("#taskAndButton");
@@ -171,3 +171,19 @@ function editTask(event) {
 
 
 editButton.addEventListener("click", editTask);
+
+
+function renderTasksFromLocalStorage() {
+    const tasks = getTasksFromLocalStorage();
+    const taskList = document.getElementById("taskList");
+
+    tasks.forEach(function (taskData) {
+        const taskDiv = createTaskElement(taskData.taskText, taskData.isCompleted);
+        taskList.appendChild(taskDiv);
+    });
+}
+
+// Call the render function when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    renderTasksFromLocalStorage();
+});
