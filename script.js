@@ -135,13 +135,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+//delete task func
 function deleteTask(event) {
     const deleteButton = event.target;
     const taskCard = deleteButton.closest("#taskAndButton");
     if (taskCard) {
         taskCard.remove();
-        updateTasksInLocalStorage();
+
     }
 }
 const taskList = document.getElementById("taskList");
@@ -150,24 +150,9 @@ taskList.addEventListener("click", function (event) {
     if (deleteButton.matches("#deleteButton") || deleteButton.matches("#deleteSvg")) {
         deleteTask(event);
     }
+    deleteButton.addEventListener("click", deleteTask);
 });
 
-deleteSvg.addEventListener("click", deleteTask);
-
-
-const taskText = document.getElementById("taskText");
-function editTask(event) {
-    const editButton = event.target;
-    const taskText = editButton.closest("#taskAndButton").queryselector("#taskText");
-    taskText.contentEditable = true;
-    taskText.focus();
 
 
 
-    if (editButton.matches("#editButton")) {
-        editTask(event);
-    }
-}
-
-
-editButton.addEventListener("click", editTask);
